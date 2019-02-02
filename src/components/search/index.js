@@ -100,6 +100,8 @@ class Search extends Component {
                         </div>
                     </form>
                 </div>
+                <br/>
+
                 <Response response={this.state.response} data={this.state.data} />
             </Fragment>
 

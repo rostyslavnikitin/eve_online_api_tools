@@ -71,7 +71,9 @@ class Subelement extends Component {
         }
         else {
             return (
-                <Fragment>{this.state.body}</Fragment>
+                <Fragment>
+                    {this.state.body}
+                </Fragment>
 
             )
         }

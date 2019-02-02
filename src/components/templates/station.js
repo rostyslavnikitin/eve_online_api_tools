@@ -7,7 +7,7 @@ class Station extends Component {
     }
 
     render() {
-        let card_style = {width: "20rem", display: "inline-block"}
+        let card_style = {width: "35rem"}
         console.log(this.props)
 
         const positions = Object.values(this.props.data.position).map(function(elem, i) {
@@ -18,8 +18,8 @@ class Station extends Component {
         })
 
         return(
-            <div className="card" style={card_style}>
-                <div className="card-header">
+            <div className="card bg-dark text-white mx-1 mt-2 mb-2" style={card_style}>
+                <div className="card-header" style={{minHeight: "5em"}}>
                     <h5>{this.props.data.name}</h5>
                 </div>
                 <div className="card-body">
@@ -30,7 +30,7 @@ class Station extends Component {
                         office_rental_cost: {this.props.data.office_rental_cost}
                     </div>
                     <div className="row">
-                        owner: {this.props.data.owner}
+                        owner: <a>{this.props.data.owner}</a>
                     </div>
                     <h4>Positions:</h4>
                     <ul>{positions}</ul>

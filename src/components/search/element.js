@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component, Fragment} from 'react'
 import Subelement from './subelement'
 
 class Element extends Component {
@@ -9,10 +9,12 @@ class Element extends Component {
             })
 
         return (
-            <section>
+            <Fragment>
                 <h3 key={this.props.key}>{this.props.name}'s</h3>
-                {sub_elements}
-            </section>
+                <div className="row mt-5 bg-secondary">
+                    {sub_elements}
+                </div>
+            </Fragment>
         )
     }
 }

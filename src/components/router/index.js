@@ -21,6 +21,7 @@ const AppRouter = () => (
             <Route path="/search/" exact component={Search} />
         </div>
 
+
     </Router>
 
 )

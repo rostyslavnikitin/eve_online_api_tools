@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import './style.css';
 
 class Index extends Component {
     render() {
         return (
-            <h2>Hello</h2>
+            <Fragment>
+                <h2>Welcome stranger!</h2>
+                <p>This is application for EVE online ESI API. Currently it is in developing mode.
+                    Only a part of planed functions already done.</p>
+            </Fragment>
         )
     }
 }

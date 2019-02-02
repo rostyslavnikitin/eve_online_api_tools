@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component, Fragment} from 'react'
 import Element from './element'
 
 class Response extends Component {
@@ -15,23 +15,28 @@ class Response extends Component {
 
 
                 const props = this.props.data;
-                body = <div className="card">
-                        <div className="header">
-                            Response
-                        </div>
-                        <label>is ok: </label>{this.props.response.ok.toString() }<br/>
-                        <label>status: </label> {this.props.response.status}<br/>
-                        <label>statusText: </label> {this.props.response.statusText}<br/>
-                        <div>
-                            <h2>Elements</h2> { Object.keys(this.props.data).map(
-                                function(elem, i) {
-                                    return <Element key={i} name={elem} subelements={Object.values(props[elem])}/>
-                                }
-                                )
+                body = <Fragment>
+                            <div className="card bg-dark text-light">
+                                <div className="card-header">
+                                    Response
+                                </div>
+                                <div className="card-body">
+                                    is ok: {this.props.response.ok.toString() }<br/>
+                                    status: {this.props.response.status}<br/>
+                                    statusText: {this.props.response.statusText}<br/>
+                                </div>
+                            </div>
+                            <div>
+                                <h2>Elements</h2> { Object.keys(this.props.data).map(
+                                    function(elem, i) {
+                                        return <Element key={i} name={elem} subelements={Object.values(props[elem])}/>
+                                    }
+                                    )
 
-                            }
-                        </div>
-                    </div>;
+                                }
+                            </div>
+                        </Fragment>
+                    ;
 
         }
 
@@ -42,7 +47,9 @@ class Response extends Component {
 
         return (
 
-            <div>{body}</div>
+            <Fragment>
+                {body}
+            </Fragment>
 
         )
     }

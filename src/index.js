@@ -7,5 +7,5 @@ import AppRouter from './components/router'
 import * as serviceWorker from './serviceWorker';
 
 
-ReactDOM.render(<div className="container"><AppRouter><Index/></AppRouter></div>, document.getElementById('root'));
+ReactDOM.render(<AppRouter><Index/></AppRouter>, document.getElementById('root'));
 serviceWorker.unregister();
