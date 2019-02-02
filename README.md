@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is an interface to interact with [EVE online](https://www.eveonline.com) [ESI API](https://esi.evetech.net)
+----------------------------------------------------------------------------------------------------------------------------
+
+
 
 ## Available Scripts
 

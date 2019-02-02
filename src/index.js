@@ -8,5 +8,4 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(<div className="container"><AppRouter><Index/></AppRouter></div>, document.getElementById('root'));
-
 serviceWorker.unregister();

@@ -10,11 +10,11 @@ class Response extends Component {
         let body;
 
 
-        if (this.props.response !== undefined && this.props.data !== undefined)  {
+        if (this.props.response !== null && this.props.data !== null)  {
             console.log(this.props.response);
 
 
-                const props =this.props.data;
+                const props = this.props.data;
                 body = <div className="card">
                         <div className="header">
                             Response
@@ -25,8 +25,6 @@ class Response extends Component {
                         <div>
                             <h2>Elements</h2> { Object.keys(this.props.data).map(
                                 function(elem, i) {
-                                    console.log("elem", elem);
-                                    console.log("subelements", Object.values(props[elem]));
                                     return <Element key={i} name={elem} subelements={Object.values(props[elem])}/>
                                 }
                                 )
