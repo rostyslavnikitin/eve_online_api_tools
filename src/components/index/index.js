@@ -6,7 +6,7 @@ class Index extends Component {
         return (
             <Fragment>
                 <h2>Welcome stranger!</h2>
-                <p>This is application for EVE online ESI API. Currently it is in developing mode.
+                <p>This is application for EVE online ESI API. Currently it's in developing mode.
                     Only a part of planed functions already done.</p>
             </Fragment>
         )
